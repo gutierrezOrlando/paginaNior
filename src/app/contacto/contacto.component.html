@@ -1,0 +1,71 @@
+<section class="site-section bg-light" id="contact-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <!-- <h3 class="section-sub-title">Contacto</h3> -->
+                <h2 class="section-title mb-3">Contacto (EN DESARROLLO)</h2>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="container" ng-app="formApp" ng-controller="formController">
+                <div class="col-md-6 col-md-offset-3">
+                   <!-- PAGE TITLE -->
+                   <div class="page-header">
+                      <h1><span class="glyphicon glyphicon-tower" style="font-size:20px"></span><span style="font-size:20px; margin-left:10px;">Send a direct e-mail to us</span></h1>
+                   </div>
+                   <!-- SHOW ERROR/SUCCESS MESSAGES -->
+                   <div id="messages" class="well" ng-show="message"></div>
+                   <!-- FORM -->
+                   <form ng-submit="processForm()">
+                      <!-- NAME -->
+                      <div id="name-group" class="form-group" ng-class="{ 'has-error' : errorName }">
+                         <label>Nombre</label>
+                         <input type="text" name="name" class="form-control" placeholder="Batman" ng-model="formData.name">
+                         <span class="help-block" ng-show="errorName"></span>
+                      </div>
+                      <div id="superhero-group" class="form-group" ng-class="{ 'has-error' : errorSuperhero }">
+                         <label>Email</label>
+                         <input type="email" name="superheroAlias" class="form-control" placeholder="correo@xxxxxx.com" ng-model="formData.superheroAlias">
+                         <span class="help-block" ng-show="errorSuperhero"></span>
+                      </div>
+                      <div id="content-group" class="form-group" ng-class="{ 'has-error' : errorContent }">
+                         <label>Mensaje</label>
+                         <textarea  rows="5" cols="50" class="form-control" placeholder="Mensaje" ng-model="formData.content"></textarea>
+                         <span class="help-block" ng-show="errorContent"></span>
+                      </div>
+                      <button type="submit" class="btn btn-success btn-lg btn-block">
+                      <span class="glyphicon glyphicon-flash"></span> Submit!
+                      </button>
+                   </form>
+                </div>
+             </div>
+
+
+
+
+
+            <div class="col-md-5">
+
+                <div class="p-4 mb-3 bg-white">
+                    <p class="mb-0 font-weight-bold">Casa matriz</p>
+                    <p class="mb-4">Monjitas 550, Oficina 19 Santiago</p>
+                    <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.4801897917505!2d-70.64735378480106!3d-33.4367939807779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5987e5f970f%3A0x3e0dd57ab5ac67a4!2sMonjitas+550%2C+Santiago%2C+Regi%C3%B3n+Metropolitana!5e0!3m2!1ses-419!2scl!4v1562811070232!5m2!1ses-419!2scl"
+                            width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    
+                    <p class="mb-0 font-weight-bold">Oficina de reuniones</p>
+                    <p class="mb-4">Barros Arana 492 oficina 78 Concepcion</p>
+                    <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.6274983256976!2d-73.05465708470932!3d-36.82744517994299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9669b5da7e25dba9%3A0x4d1e790fb2f9fbc!2sBarros+Arana+492%2C+oficina+78%2C+Concepci%C3%B3n%2C+Regi%C3%B3n+del+B%C3%ADo+B%C3%ADo!5e0!3m2!1ses-419!2scl!4v1562811231151!5m2!1ses-419!2scl"
+                            width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    <p class="mb-0 font-weight-bold">Teléfono</p>
+                    <p class="mb-4"> <a href="tel:+56228402547">+56 228402547</a></p>
+
+                    <p class="mb-0 font-weight-bold">Email</p>
+                    <p class="mb-0">
+                        <a href="mailto:contacto@nior.cl">contacto@nior.cl</a></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
